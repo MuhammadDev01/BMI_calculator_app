@@ -36,22 +36,20 @@ class _BmiPageState extends State<BmiPage> {
         padding: const EdgeInsets.symmetric(horizontal: 22),
         child: Column(
           children: [
-            Expanded(
-              child: GenderRow(
-                isMale: isMale,
-                onTapMale: () {
-                  setState(
-                    () {
-                      isMale = true;
-                    },
-                  );
-                },
-                onTapFemale: () {
-                  setState(() {
-                    isMale = false;
-                  });
-                },
-              ),
+            GenderRow(
+              isMale: isMale,
+              onTapMale: () {
+                setState(
+                  () {
+                    isMale = true;
+                  },
+                );
+              },
+              onTapFemale: () {
+                setState(() {
+                  isMale = false;
+                });
+              },
             ),
             Expanded(
               child: HeightCalc(

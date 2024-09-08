@@ -1,4 +1,4 @@
-import 'package:bmi_app/components/components.dart';
+import 'package:bmi_app/widgets/calc_item.dart';
 import 'package:flutter/material.dart';
 
 class WeightAgeCalc extends StatelessWidget {
@@ -22,7 +22,7 @@ class WeightAgeCalc extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: calcItem(
+          child: CalcItem(
             title: 'weight',
             number: weight,
             onPlusPressed: onPlusWeight,
@@ -33,7 +33,7 @@ class WeightAgeCalc extends StatelessWidget {
           width: 28,
         ),
         Expanded(
-          child: calcItem(
+          child: CalcItem(
             title: 'age',
             number: age,
             onMinusPressed: onMinusAge,

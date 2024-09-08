@@ -1,5 +1,5 @@
-import 'package:bmi_app/components/components.dart';
 import 'package:bmi_app/components/constants.dart';
+import 'package:bmi_app/widgets/gender_item.dart';
 import 'package:flutter/material.dart';
 
 class GenderRow extends StatelessWidget {
@@ -18,7 +18,7 @@ class GenderRow extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: genderItem(
+          child: GenderItem(
             color: isMale ? Colors.blue : kColorItem,
             onTap: onTapMale,
             icon: Icons.male_rounded,
@@ -30,7 +30,7 @@ class GenderRow extends StatelessWidget {
           width: 30,
         ),
         Expanded(
-          child: genderItem(
+          child: GenderItem(
             onTap: onTapFemale,
             color: !isMale ? Colors.blue : kColorItem,
             icon: Icons.female_rounded,
