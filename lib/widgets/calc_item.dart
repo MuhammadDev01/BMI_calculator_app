@@ -1,4 +1,5 @@
 import 'package:bmi_app/components/constants.dart';
+import 'package:bmi_app/components/responsive_font.dart';
 import 'package:flutter/material.dart';
 
 class CalcItem extends StatelessWidget {
@@ -26,16 +27,22 @@ class CalcItem extends StatelessWidget {
           children: [
             Text(
               title.toUpperCase(),
-              style: const TextStyle(
+              style:  TextStyle(
                 color: Colors.grey,
-                fontSize: 22,
+                fontSize: getResponsiveFontSize(
+                  context,
+                  fontSize: 22,
+                ),
               ),
             ),
             Text(
               '$number',
-              style: const TextStyle(
+              style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 50,
+                    fontSize: getResponsiveFontSize(
+                    context,
+                    fontSize: 50,
+                  ),
                   fontWeight: FontWeight.w900),
             ),
             Row(

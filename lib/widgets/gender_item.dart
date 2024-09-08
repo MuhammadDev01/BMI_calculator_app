@@ -1,3 +1,4 @@
+import 'package:bmi_app/components/responsive_font.dart';
 import 'package:flutter/material.dart';
 
 class GenderItem extends StatelessWidget {
@@ -34,9 +35,12 @@ class GenderItem extends StatelessWidget {
               ),
               Text(
                 gender,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 22,
+                  fontSize: getResponsiveFontSize(
+                    context,
+                    fontSize: 22,
+                  ),
                 ),
               ),
             ],

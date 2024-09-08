@@ -32,67 +32,63 @@ class _BmiPageState extends State<BmiPage> {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 22),
-        child: ListView(
-          children: [
-            GenderRow(
-              isMale: isMale,
-              onTapMale: () {
-                setState(
-                  () {
-                    isMale = true;
-                  },
-                );
-              },
-              onTapFemale: () {
-                setState(() {
-                  isMale = false;
-                });
-              },
-            ),
-            Expanded(
-              child: HeightSlider(
-                currentHeight: currentHeight,
-                onChanged: (value) {
-                  setState(
-                    () {
-                      currentHeight = value;
-                    },
-                  );
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        children: [
+          GenderRow(
+            isMale: isMale,
+            onTapMale: () {
+              setState(
+                () {
+                  isMale = true;
                 },
-              ),
-            ),
-            WeightAgeCalc(
-              age: age,
-              weight: weight,
-              onPlusAge: () {
-                setState(() {
-                  age++;
-                });
-              },
-              onMinusAge: () {
-                setState(() {
-                  age--;
-                });
-              },
-              onMinusWeight: () => setState(() {
-                weight--;
-              }),
-              onPlusWeight: () => setState(() {
-                weight++;
-              }),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            CalcButton(
-              age: age,
-              gender: isMale ? 'Male' : 'Female',
-              bmi: weight / pow(currentHeight / 100, 2),
-            ),
-          ],
-        ),
+              );
+            },
+            onTapFemale: () {
+              setState(() {
+                isMale = false;
+              });
+            },
+          ),
+          HeightSlider(
+            currentHeight: currentHeight,
+            onChanged: (value) {
+              setState(
+                () {
+                  currentHeight = value;
+                },
+              );
+            },
+          ),
+          WeightAgeCalc(
+            age: age,
+            weight: weight,
+            onPlusAge: () {
+              setState(() {
+                age++;
+              });
+            },
+            onMinusAge: () {
+              setState(() {
+                age--;
+              });
+            },
+            onMinusWeight: () => setState(() {
+              weight--;
+            }),
+            onPlusWeight: () => setState(() {
+              weight++;
+            }),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          CalcButton(
+            age: age,
+            gender: isMale ? 'Male' : 'Female',
+            bmi: weight / pow(currentHeight / 100, 2),
+          ),
+        ],
       ),
     );
   }
