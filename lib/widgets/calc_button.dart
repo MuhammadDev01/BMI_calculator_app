@@ -14,6 +14,7 @@ class CalcButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      padding: const EdgeInsets.all(12),
       decoration: const BoxDecoration(
           color: Colors.pink,
           borderRadius: BorderRadius.only(

@@ -15,9 +15,10 @@ class GenderItem extends StatelessWidget {
   final BuildContext context;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GestureDetector(
-        onTap: onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: AspectRatio(
+        aspectRatio: 1,
         child: Container(
           decoration: BoxDecoration(
             color: color,

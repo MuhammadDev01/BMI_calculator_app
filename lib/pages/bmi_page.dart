@@ -34,7 +34,7 @@ class _BmiPageState extends State<BmiPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 22),
-        child: Column(
+        child: ListView(
           children: [
             GenderRow(
               isMale: isMale,
@@ -52,7 +52,7 @@ class _BmiPageState extends State<BmiPage> {
               },
             ),
             Expanded(
-              child: HeightCalc(
+              child: HeightSlider(
                 currentHeight: currentHeight,
                 onChanged: (value) {
                   setState(
@@ -63,27 +63,25 @@ class _BmiPageState extends State<BmiPage> {
                 },
               ),
             ),
-            Expanded(
-              child: WeightAgeCalc(
-                age: age,
-                weight: weight,
-                onPlusAge: () {
-                  setState(() {
-                    age++;
-                  });
-                },
-                onMinusAge: () {
-                  setState(() {
-                    age--;
-                  });
-                },
-                onMinusWeight: () => setState(() {
-                  weight--;
-                }),
-                onPlusWeight: () => setState(() {
-                  weight++;
-                }),
-              ),
+            WeightAgeCalc(
+              age: age,
+              weight: weight,
+              onPlusAge: () {
+                setState(() {
+                  age++;
+                });
+              },
+              onMinusAge: () {
+                setState(() {
+                  age--;
+                });
+              },
+              onMinusWeight: () => setState(() {
+                weight--;
+              }),
+              onPlusWeight: () => setState(() {
+                weight++;
+              }),
             ),
             const SizedBox(
               height: 10,

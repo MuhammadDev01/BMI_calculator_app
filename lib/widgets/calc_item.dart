@@ -14,7 +14,8 @@ class CalcItem extends StatelessWidget {
   final void Function() onMinusPressed;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return AspectRatio(
+      aspectRatio: 1,
       child: Container(
         decoration: BoxDecoration(
           color: kColorItem,
