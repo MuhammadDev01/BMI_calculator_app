@@ -1,24 +1,17 @@
-import 'dart:math';
-import 'package:bmi_app/widgets/calc_button.dart';
-import 'package:bmi_app/widgets/gender_row.dart';
-import 'package:bmi_app/widgets/weight_age_calc.dart';
-import 'package:bmi_app/widgets/height_calc.dart';
+import 'dart:developer';
+
+import 'package:bmi_app/layout/mobile_layout.dart';
+import 'package:bmi_app/layout/tablet_layout.dart';
+import 'package:bmi_app/widgets/adaptive_layout.dart';
 import 'package:flutter/material.dart';
 
-class BmiPage extends StatefulWidget {
+class BmiPage extends StatelessWidget {
   const BmiPage({super.key});
 
   @override
-  State<BmiPage> createState() => _BmiPageState();
-}
-
-class _BmiPageState extends State<BmiPage> {
-  bool isMale = true;
-  double currentHeight = 180;
-  int weight = 60;
-  int age = 25;
-  @override
   Widget build(BuildContext context) {
+    log(MediaQuery.sizeOf(context).width.toString());
+
     return Scaffold(
       backgroundColor: const Color(0xff0A0F1E),
       appBar: AppBar(
@@ -32,63 +25,9 @@ class _BmiPageState extends State<BmiPage> {
         ),
         centerTitle: true,
       ),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        children: [
-          GenderRow(
-            isMale: isMale,
-            onTapMale: () {
-              setState(
-                () {
-                  isMale = true;
-                },
-              );
-            },
-            onTapFemale: () {
-              setState(() {
-                isMale = false;
-              });
-            },
-          ),
-          HeightSlider(
-            currentHeight: currentHeight,
-            onChanged: (value) {
-              setState(
-                () {
-                  currentHeight = value;
-                },
-              );
-            },
-          ),
-          WeightAgeCalc(
-            age: age,
-            weight: weight,
-            onPlusAge: () {
-              setState(() {
-                age++;
-              });
-            },
-            onMinusAge: () {
-              setState(() {
-                age--;
-              });
-            },
-            onMinusWeight: () => setState(() {
-              weight--;
-            }),
-            onPlusWeight: () => setState(() {
-              weight++;
-            }),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          CalcButton(
-            age: age,
-            gender: isMale ? 'Male' : 'Female',
-            bmi: weight / pow(currentHeight / 100, 2),
-          ),
-        ],
+      body: AdaptiveLayout(
+        mobileLayout: (context) => const MobileLayout(),
+        tabletLayout: (context) => const TabletLayout(),
       ),
     );
   }

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       DevicePreview(
-        enabled: !kReleaseMode,
+        enabled: kReleaseMode,
         builder: (context) => const BmiCalculatorApp(), // Wrap your app
       ),
     );
