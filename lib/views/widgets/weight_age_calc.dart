@@ -1,4 +1,4 @@
-import 'package:bmi_app/widgets/calc_item.dart';
+import 'package:bmi_app/views/widgets/calc_item.dart';
 import 'package:flutter/material.dart';
 
 class WeightAgeCalc extends StatelessWidget {

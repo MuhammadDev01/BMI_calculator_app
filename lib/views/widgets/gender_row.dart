@@ -1,5 +1,5 @@
-import 'package:bmi_app/components/constants.dart';
-import 'package:bmi_app/widgets/gender_item.dart';
+import 'package:bmi_app/constants.dart';
+import 'package:bmi_app/views/widgets/gender_item.dart';
 import 'package:flutter/material.dart';
 
 class GenderRow extends StatelessWidget {

@@ -1,13 +1,11 @@
-import 'dart:math';
-
-import 'package:bmi_app/models/bmi_model.dart';
-import 'package:bmi_app/widgets/bmi_result.dart';
 import 'package:flutter/material.dart';
 
 class CalcButton extends StatelessWidget {
   const CalcButton({
     super.key,
+    required this.onPressed,
   });
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,11 +18,7 @@ class CalcButton extends StatelessWidget {
             bottomRight: Radius.circular(8),
           )),
       child: MaterialButton(
-        onPressed: () {
-          if (MediaQuery.sizeOf(context).width < 700) {
-            calcResultMethod(context);
-          } else {}
-        },
+        onPressed: onPressed,
         child: const Text(
           'CALCULATE',
           style: TextStyle(
@@ -32,20 +26,6 @@ class CalcButton extends StatelessWidget {
             fontSize: 24,
             fontWeight: FontWeight.w900,
           ),
-        ),
-      ),
-    );
-  }
-
-//weight / pow(currentHeight / 100, 2)
-  Future<dynamic> calcResultMethod(BuildContext context) {
-    return showDialog(
-      context: context,
-      builder: (context) => Center(
-        child: BmiResult(
-          gender: BmiModel.isMale ? 'Male' : 'Female',
-          age: BmiModel.age,
-          bmi: BmiModel.weight / pow(BmiModel.currentHeight / 100, 2),
         ),
       ),
     );

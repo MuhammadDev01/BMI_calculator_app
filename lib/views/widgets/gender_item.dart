@@ -1,4 +1,4 @@
-import 'package:bmi_app/components/responsive_font.dart';
+import 'package:bmi_app/utils/responsive_font.dart';
 import 'package:flutter/material.dart';
 
 class GenderItem extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:bmi_app/components/constants.dart';
-import 'package:bmi_app/components/responsive_font.dart';
+import 'package:bmi_app/constants.dart';
+import 'package:bmi_app/utils/responsive_font.dart';
 import 'package:flutter/material.dart';
 
 class CalcItem extends StatelessWidget {
