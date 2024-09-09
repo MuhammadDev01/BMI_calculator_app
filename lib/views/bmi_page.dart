@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:bmi_app/utils/responsive_font.dart';
 import 'package:bmi_app/views/layout/mobile_layout.dart';
 import 'package:bmi_app/views/layout/tablet_layout.dart';
@@ -12,8 +10,6 @@ class BmiPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log(MediaQuery.sizeOf(context).width.toString());
-
     return Scaffold(
       backgroundColor: const Color(0xff0A0F1E),
       appBar: AppBar(
