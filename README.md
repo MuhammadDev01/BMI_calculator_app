@@ -75,7 +75,7 @@ A **responsive** and **adaptive** Body Mass Index (BMI) Calculator built with Fl
 
 ## 👤 Author
 
-**Dev Muhammad** - [LinkedIn](https://www.linkedin.com/in/muhammad-khaled-811a9431a/) | [GitHub](https://github.com/yourusername)
+**Dev Muhammad** - [LinkedIn](https://www.linkedin.com/in/muhammad-khaled-811a9431a/) | [GitHub](https://github.com/MuhammadDev01)
 
 ## 💬 Feedback
 
