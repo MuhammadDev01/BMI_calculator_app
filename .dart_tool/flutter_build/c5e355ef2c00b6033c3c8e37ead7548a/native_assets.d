@@ -1,1 +1,0 @@
- D:\\Courses\\Dart\ and\ flutter\\Flutter\\vs\ code\\Done_Projects\\Abdullah_Mansour\\1-\ bmi_app\\bmi_app\\.dart_tool\\flutter_build\\c5e355ef2c00b6033c3c8e37ead7548a\\native_assets.yaml: 
