@@ -13,9 +13,14 @@ A **responsive** and **adaptive** Body Mass Index (BMI) Calculator built with Fl
 - **Dark Mode Support**: Automatically switches to dark mode based on system settings.
 - **Smooth Animations**: Engaging UI with smooth transitions and animations.
 
+
 ## 🖼️ Screenshots
 
 ![Video_2024-09-09_064300](https://github.com/user-attachments/assets/10280cbd-75e0-41b1-b31d-dc606092d966)
+
+## 📥 Downloads
+
+**Download App**      [Here](https://drive.google.com/drive/folders/1YOzitF6RP27tDswPjbN0Su8Wqwm8zDNN).
 
 
 ## 🚀 Getting Started
